@@ -9,9 +9,11 @@ extern int sceneId;
 
 void init()
 {
-    gWidth = 500;
-    gHeight = 500;
-    gName = "Sample";
+    gWidth = 640;
+    gHeight = 400;
+    gName = "Tabula Rasa";
+    windowInit();
+    scenes.push_back(new menu());
     scenes.push_back(new game());
-    sceneId = GAME;
+    scenes[MENU]->focus();
 }
